@@ -1,0 +1,57 @@
+# ==========================================
+# Gradle Build & Cache Files
+# ==========================================
+.gradle/
+build/
+/out/
+
+# Avoid ignoring the Gradle wrapper jar and properties so others can build the project
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Gradle local configuration caches
+.gradletasknamecache
+gradle-app.setting
+
+# ==========================================
+# IDE & Text Editors
+# ==========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# ==========================================
+# Minecraft Test Server Runtime Logs & Dumps
+# ==========================================
+# If you run a local test server within your project root
+/run/
+/plugins/
+/logs/
+/cache/
+*.log
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# Operating System Garbage
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

@@ -1,0 +1,8 @@
+# API base URL without a trailing slash
+api_base_url: "http://mc.bsr.gg:3000/api"
+
+# API key
+api_key: ""
+
+# API queue interval in ticks
+queue_interval: 100

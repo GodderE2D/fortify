@@ -1,0 +1,67 @@
+name: fortify
+version: 1.0.0
+main: gg.bsr.fortify.Fortify
+description: Main plugin for Fortalice
+author: GodderE2D
+website: https://bsr.gg
+api-version: 1.19
+depend: [LuckPerms, mcMMO]
+
+commands:
+  setxp:
+    description: Set a player's Fortalice XP
+    usage: /setxp <player> <xp>
+    permission: fortify.xp.setxp
+  setlevel:
+    description: Set a player's Fortalice XP level
+    usage: /setlevel <player> <level>
+    permission: fortify.xp.setlevel
+  showxp:
+    description: Show your Fortalice XP in the boss bar
+    usage: /showxp
+    permission: fortify.xp.showxp
+  hidexp:
+    description: Hide your Fortalice XP in the boss bar
+    usage: /hidexp
+    permission: fortify.xp.hidexp
+  verify:
+    description: Verifies the player with a verification code.
+    usage: /verify <code>
+    permission: fortify.verify
+  phantom:
+    description: Configure phantom spawning for the player.
+    usage: /phantom <status|enable|disable>
+    permission: fortify.phantom
+
+permission:
+  fortify.*:
+    description: Gives access to all Fortify permissions
+    default: op
+    children:
+      fortify.verify: true
+      fortify.grantprestige: true
+      fortify.xp: true
+  fortify.verify:
+    description: Allows the player to verify themselves
+  fortify.phantom:
+    description: Allows the player to configure phantom spawning for themselves
+  fortify.grantprestige:
+    description: Allows the player to be granted prestige if requirements are met
+  fortify.xp:
+    description: Gives access to all Fortify XP permissions
+    children:
+      fortify.xp.gain: true
+      fortify.xp.setxp: true
+      fortify.xp.setlevel: true
+      fortify.xp.showxp: true
+      fortify.xp.hidexp: true
+  fortify.xp.gain:
+    description: Allows the player to gain Fortalice XP
+  fortify.xp.setxp:
+    description: Allows the player to run the /setxp command
+  fortify.xp.setlevel:
+    description: Allows the player to run the /setlevel command
+  fortify.xp.showxp:
+    description: Allows the player to run the /showxp command
+  fortify.xp.hidexp:
+    description: Allows the player to run the /hidexp command
